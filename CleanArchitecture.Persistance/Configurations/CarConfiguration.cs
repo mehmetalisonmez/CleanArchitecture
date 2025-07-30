@@ -10,5 +10,6 @@ public sealed class CarConfiguration : IEntityTypeConfiguration<Car>
 	{
 		builder.ToTable("Cars"); //Database' de görülecek tablol ismi
 		builder.HasKey(p => p.Id); // Id kolonunu Primary Key olduğun belirttik
+		builder.HasIndex(p => p.Name);
 	}
 }
